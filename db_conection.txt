@@ -7,5 +7,4 @@ Conección a la db del TP:
 
 psql -h 190.114.206.177 -p 6432 -d tutifruti39 -U tf39_dba
 
-Contraseña: tf235
 
