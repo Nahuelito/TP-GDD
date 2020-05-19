@@ -1,0 +1,10 @@
+insert into tp.proveedor (nombre, pais) values ('Thinfruit Sedge', 'Colombia');
+insert into tp.proveedor (nombre, pais) values ('Florida Feathershank', 'Indonesia');
+insert into tp.proveedor (nombre, pais) values ('Shrubland Beggarticks', 'South Africa');
+insert into tp.proveedor (nombre, pais) values ('Salt Heliotrope', 'Portugal');
+insert into tp.proveedor (nombre, pais) values ('Malaysian Persimmon', 'Philippines');
+insert into tp.proveedor (nombre, pais) values ('Brazilian Morning-glory', 'Philippines');
+insert into tp.proveedor (nombre, pais) values ('Santa Cruz Water-lily', 'Nigeria');
+insert into tp.proveedor (nombre, pais) values ('Amur Maakia', 'Azerbaijan');
+insert into tp.proveedor (nombre, pais) values ('Vladimir Putin', 'Russia');
+insert into tp.proveedor (nombre, pais) values ('Fairyduster', 'Costa Rica');

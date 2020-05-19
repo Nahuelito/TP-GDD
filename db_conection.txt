@@ -1,4 +1,4 @@
-\dt main.
+\dt main
 
 Lista todas las tablas de main.
 
@@ -7,4 +7,5 @@ Conección a la db del TP:
 
 psql -h 190.114.206.177 -p 6432 -d tutifruti39 -U tf39_dba
 
-
+Bajar copia de db tp
+pg_dump -h 190.114.206.177 -p 6432 -d tutifruti39 -U tf39_dba -n tp
