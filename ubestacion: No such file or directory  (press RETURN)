@@ -1,0 +1,91 @@
+                            Trabajo Práctico
+
+        Gestión de Datos
+                 Sistema Eléctrico 2020
+
+
+
+
+Integrantes:
+Albino, Nahuel Albino – ​nahuel.albino@gmail.com
+Giancarelli, Francisco – ​franciscogiancarelli@gmail.com
+Para la realización del diagrama de entidad de relaciones utilizamos la
+aplicación web ​draw.io​. Debido al tamaño del diagrama, dejamos el mismo
+disponible a través del siguiente hipervínculo:
+https://raw.githubusercontent.com/Nahuelito/TP-GDD/master/DER.jpg
+
+Las entidades definidas en el diagrama son:
+  ● Solar
+         ○ Entidad de especialización de productor.
+         ○ Atributos:
+              ■ Media anual de horas de sol
+              ■ Superficie de paneles
+  ● Térmica
+         ○ Entidad de especialización de productor.
+         ○ Atributos:
+              ■ Volumen de gas
+              ■ Número de hornos
+              ■ Volumen de carbón
+  ● Nuclear
+         ○ Entidad de especialización de productor.
+         ○ Atributos:
+              ■ Volumen de plutonio
+              ■ Volumen de residuos
+              ■ Número de reactores
+  ● Hidroeléctrica
+         ○ Entidad de especialización de productor.
+         ○ Atributos:
+              ■ Ocupación
+              ■ Número de turbinas
+              ■ Capacidad máxima
+  ● Productor
+         ○ Entidad encargada de producir
+         ○ Atributos:
+              ■ Nombre
+              ■ Producción máxima
+              ■ Producción media
+              ■ Fecha de funcionamiento
+  ● Proveedor
+         ○ Atributos:
+              ■ Nombre
+              ■ País
+● Transportista
+     ○ Atributos:
+           ■ Matricula
+           ■ Nombre
+● Estación Primaria
+     ○ Atributos:
+           ■ Nombre
+           ■ Número de transformadores
+● Red de distribución
+     ○ Atributos:
+           ■ Id
+● Línea
+     ○ Atributos:
+           ■ Número de id
+           ■ Longitud
+● Subestación
+     ○ Atributos:
+           ■ Id
+● Zona de servicio
+     ○ Atributos:
+           ■ Número de particulares
+           ■ Id
+           ■ Consumo medio
+           ■ Número de empresas
+           ■ Número de institución
+● Provincia
+     ○ Atributos:
+           ■ Nombre
+           ■ Código
+● Compañía Eléctrica
+     ○ Atributos:
+           ■ Nombre
+Para el diagrama de tablas se utilizó la herramienta web ​dbdiagram​. El
+mismo se encuentra disponible en el siguiente hipervínculo:
+https://raw.githubusercontent.com/Nahuelito/TP-GDD/master/DIAGRAM_TAB
+LAS.png
+
+Para ambos diagrama se utilizó el navegador chrome, con el sistema
+operativo Ubuntu.
+

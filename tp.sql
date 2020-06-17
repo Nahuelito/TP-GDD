@@ -328,7 +328,6 @@ Otter, oriental short-clawed	5
 Peregrine falcon	7
 Canada goose	7
 Bird, black-throated butcher	11
-Eagle, pallas's fish	4
 Fox, bat-eared	12
 White-browed sparrow weaver	2
 Bleu, blue-breasted cordon	2
