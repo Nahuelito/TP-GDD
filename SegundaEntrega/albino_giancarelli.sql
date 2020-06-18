@@ -10,7 +10,22 @@ FROM (
   GROUP BY nombre_provincia
 ) AS auxiliar;
 -- 3. Para  centrales nuaquellascleares que en los últimos 12 meses hubieran adquirido más de 100 tn de plutonio, listar los nombres de las centrales nucleares, los proveedores y transportistas, fechas y cantidades de plutonio comprado durante ese período.
-
+SELECT
+ nombre_proveedor AS proveedor,
+ transportista.nombre AS transportista,
+ toneladas,
+ fecha
+FROM entrega_proveeduria
+JOIN
+( SELECT
+  nombre_productor,
+  SUM(CASE WHEN fecha > CURRENT_DATE - INTERVAL '12 month' THEN toneladas END)
+ FROM tp.entrega_proveeduria
+ GROUP BY nombre_productor
+ HAVING SUM(CASE WHEN fecha > CURRENT_DATE - INTERVAL '12 month' THEN toneladas END) > 100
+) AS auxiliar ON auxiliar.nombre_productor = entrega_proveeduria.nombre_productor
+JOIN transportista ON transportista.matricula = entrega_proveeduria.matricula_transportista
+WHERE fecha > CURRENT_DATE - INTERVAL '12 month';
 -- 4. Mostrar el nombre, y la producción media y máxima, de los productores básicos que proveen energía a todas las estaciones primarias.
 
 -- 5. Para las redes de distribución que en los últimos 6 meses han tenido remanentes de energía se requiere mostrar la identificación de la red de distribución, la fecha, el volumen de energía y la red a cuál se traspasó la energía remanente.
