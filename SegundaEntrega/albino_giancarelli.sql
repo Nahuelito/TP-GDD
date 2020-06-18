@@ -3,8 +3,13 @@ SELECT id, nombre_estacion, nombre_compania
 FROM tp.red_distribucion rd
 JOIN tp.red_pertenece_compania rc ON (rd.id = rc.numero_red);
 -- 2. Listar el nombre de la provincia con el menor número de zonas de servicio y la cantidad de zonas de servicio que posee.
-
--- 3. Para aquellas centrales nucleares que en los últimos 12 meses hubieran adquirido más de 100 tn de plutonio, listar los nombres de las centrales nucleares, los proveedores y transportistas, fechas y cantidades de plutonio comprado durante ese período.
+SELECT MIN(count) 
+FROM (
+  SELECT COUNT(nombre_provincia) AS count 
+  FROM zona 
+  GROUP BY nombre_provincia
+) AS auxiliar;
+-- 3. Para  centrales nuaquellascleares que en los últimos 12 meses hubieran adquirido más de 100 tn de plutonio, listar los nombres de las centrales nucleares, los proveedores y transportistas, fechas y cantidades de plutonio comprado durante ese período.
 
 -- 4. Mostrar el nombre, y la producción media y máxima, de los productores básicos que proveen energía a todas las estaciones primarias.
 
