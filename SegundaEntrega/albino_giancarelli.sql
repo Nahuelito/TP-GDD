@@ -40,9 +40,56 @@ GROUP BY p.nombre
 HAVING COUNT(*)= (SELECT COUNT(*) FROM tp.estacion_primaria)
 ORDER BY p.nombre;
 -- 5. Para las redes de distribución que en los últimos 6 meses han tenido remanentes de energía se requiere mostrar la identificación de la red de distribución, la fecha, el volumen de energía y la red a cuál se traspasó la energía remanente.
-
+SELECT 
+ * 
+FROM tp.suministro_inter_red
+WHERE fecha > current_date - interval '6 month';
 -- 6. Mostrar el nombre de las estaciones primarias que son o han sido abastecidas por las centrales térmicas que producen un volumen de emisiones de gases mayor a 50 ppm (partes por millón).
-
+SELECT DISTINCT 
+ nombre_estacion 
+FROM tp.entrega_produccion 
+JOIN tp.productor_termico ON productor_termico.nombre = entrega_produccion.nombre_productor 
+WHERE volumen_gas > 50;
 -- 7. Listar aquellas estaciones primarias que han sido abastecidas por centrales hidroeléctricas o solares, pero nunca abastecidas por centrales nucleares o térmicas.
-
+SELECT
+ nombre
+FROM tp.estacion_primaria esp
+WHERE 
+( 
+  EXISTS (
+   SELECT 
+    * 
+   FROM tp.entrega_produccion ep
+   JOIN tp.productor_hidroelectrico ph ON ph.nombre = ep.nombre_productor
+   WHERE esp.nombre = ep.nombre_estacion
+  )
+  OR
+  EXISTS (
+   SELECT 
+    * 
+   FROM tp.entrega_produccion ep
+   JOIN tp.productor_solar ph on ph.nombre = ep.nombre_productor
+   WHERE esp.nombre = ep.nombre_estacion
+  )
+)
+AND
+NOT EXISTS (
+ SELECT 
+  * 
+ FROM tp.entrega_produccion ep
+ JOIN tp.productor_nuclear ph on ph.nombre = ep.nombre_productor
+ WHERE esp.nombre = ep.nombre_estacion
+)
+AND
+NOT EXISTS (
+ SELECT 
+  * 
+ FROM tp.entrega_produccion ep
+ JOIN tp.productor_termico ph on ph.nombre = ep.nombre_productor
+ WHERE esp.nombre = ep.nombre_estacion
+);
 -- 8. Listar la provincia y la zona de servicio con el máximo consumo medio. En el listado mostrar provincia, zona de servicio, máximo consumo medio y la cantidad de consumidores por categoría.
+SELECT 
+ * 
+FROM tp.zona 
+WHERE consumo_medio = (SELECT max(consumo_medio) FROM tp.zona);
