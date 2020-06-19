@@ -27,17 +27,18 @@ JOIN
 JOIN transportista ON transportista.matricula = entrega_proveeduria.matricula_transportista
 WHERE fecha > CURRENT_DATE - INTERVAL '12 month';
 -- 4. Mostrar el nombre, y la producción media y máxima, de los productores básicos que proveen energía a todas las estaciones primarias.
-with entregas as (
-select distinct nombre_productor,nombre_estacion
-from tp.entrega_produccion
-)
-select p.nombre,count(*) as cant_estaciones_a_las_cuales_entrego, p.produccion_media
-from tp.productor p
-left join entregas e on e.nombre_productor=p.nombre
-group by p.nombre
-having count(*)= 2 --(select count(*) from tp.estacion_primaria)
-order by p.nombre;
-
+WITH entregas AS (
+ SELECT DISTINCT nombre_productor,nombre_estacion
+ FROM tp.entrega_produccion
+) SELECT 
+ p.nombre,
+ p.produccion_media,
+ p.produccion_maxima
+FROM tp.productor p
+LEFT JOIN entregas e ON e.nombre_productor = p.nombre
+GROUP BY p.nombre
+HAVING COUNT(*)= (SELECT COUNT(*) FROM tp.estacion_primaria)
+ORDER BY p.nombre;
 -- 5. Para las redes de distribución que en los últimos 6 meses han tenido remanentes de energía se requiere mostrar la identificación de la red de distribución, la fecha, el volumen de energía y la red a cuál se traspasó la energía remanente.
 
 -- 6. Mostrar el nombre de las estaciones primarias que son o han sido abastecidas por las centrales térmicas que producen un volumen de emisiones de gases mayor a 50 ppm (partes por millón).
