@@ -1,5 +1,12 @@
 CREATE SCHEMA tp;
 
+
+ALTER SCHEMA tp OWNER TO tf39_dba;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
 --
 -- Name: compania_electrica; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -7,6 +14,9 @@ CREATE SCHEMA tp;
 CREATE TABLE tp.compania_electrica (
     nombre character varying(255) NOT NULL
 );
+
+
+ALTER TABLE tp.compania_electrica OWNER TO tf39_dba;
 
 --
 -- Name: entrega_produccion; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -19,6 +29,8 @@ CREATE TABLE tp.entrega_produccion (
     energia integer
 );
 
+
+ALTER TABLE tp.entrega_produccion OWNER TO tf39_dba;
 
 --
 -- Name: entrega_proveeduria; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -34,6 +46,8 @@ CREATE TABLE tp.entrega_proveeduria (
 );
 
 
+ALTER TABLE tp.entrega_proveeduria OWNER TO tf39_dba;
+
 --
 -- Name: estacion_primaria; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -43,6 +57,8 @@ CREATE TABLE tp.estacion_primaria (
     nro_transformadores integer
 );
 
+
+ALTER TABLE tp.estacion_primaria OWNER TO tf39_dba;
 
 --
 -- Name: linea; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -54,6 +70,8 @@ CREATE TABLE tp.linea (
     numero_red_distribucion integer
 );
 
+
+ALTER TABLE tp.linea OWNER TO tf39_dba;
 
 --
 -- Name: productor; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -67,6 +85,8 @@ CREATE TABLE tp.productor (
 );
 
 
+ALTER TABLE tp.productor OWNER TO tf39_dba;
+
 --
 -- Name: productor_hidroelectrico; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -78,6 +98,8 @@ CREATE TABLE tp.productor_hidroelectrico (
     nombre character varying(255)
 );
 
+
+ALTER TABLE tp.productor_hidroelectrico OWNER TO tf39_dba;
 
 --
 -- Name: productor_nuclear; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -91,6 +113,8 @@ CREATE TABLE tp.productor_nuclear (
 );
 
 
+ALTER TABLE tp.productor_nuclear OWNER TO tf39_dba;
+
 --
 -- Name: productor_solar; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -101,6 +125,8 @@ CREATE TABLE tp.productor_solar (
     nombre character varying(255)
 );
 
+
+ALTER TABLE tp.productor_solar OWNER TO tf39_dba;
 
 --
 -- Name: productor_termico; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -114,6 +140,8 @@ CREATE TABLE tp.productor_termico (
 );
 
 
+ALTER TABLE tp.productor_termico OWNER TO tf39_dba;
+
 --
 -- Name: proveedor; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -123,6 +151,8 @@ CREATE TABLE tp.proveedor (
     pais character varying(255)
 );
 
+
+ALTER TABLE tp.proveedor OWNER TO tf39_dba;
 
 --
 -- Name: provincia; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -134,6 +164,8 @@ CREATE TABLE tp.provincia (
 );
 
 
+ALTER TABLE tp.provincia OWNER TO tf39_dba;
+
 --
 -- Name: red_distribucion; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -143,6 +175,8 @@ CREATE TABLE tp.red_distribucion (
     nombre_estacion character varying(255)
 );
 
+
+ALTER TABLE tp.red_distribucion OWNER TO tf39_dba;
 
 --
 -- Name: red_pertenece_compania; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -154,6 +188,8 @@ CREATE TABLE tp.red_pertenece_compania (
 );
 
 
+ALTER TABLE tp.red_pertenece_compania OWNER TO tf39_dba;
+
 --
 -- Name: subestacion; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -163,6 +199,8 @@ CREATE TABLE tp.subestacion (
     linea_id integer
 );
 
+
+ALTER TABLE tp.subestacion OWNER TO tf39_dba;
 
 --
 -- Name: suministro_inter_red; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -176,6 +214,8 @@ CREATE TABLE tp.suministro_inter_red (
 );
 
 
+ALTER TABLE tp.suministro_inter_red OWNER TO tf39_dba;
+
 --
 -- Name: transportista; Type: TABLE; Schema: tp; Owner: tf39_dba
 --
@@ -185,6 +225,8 @@ CREATE TABLE tp.transportista (
     matricula character varying(255) NOT NULL
 );
 
+
+ALTER TABLE tp.transportista OWNER TO tf39_dba;
 
 --
 -- Name: zona; Type: TABLE; Schema: tp; Owner: tf39_dba
@@ -201,6 +243,8 @@ CREATE TABLE tp.zona (
 );
 
 
+ALTER TABLE tp.zona OWNER TO tf39_dba;
+
 --
 -- Name: compania_electrica compania_electrica_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
@@ -210,7 +254,7 @@ ALTER TABLE ONLY tp.compania_electrica
 
 
 --
--- Name: entrega_produccion entrega_produccion_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: entrega_produccion entrega_produccion_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_produccion
@@ -218,7 +262,7 @@ ALTER TABLE ONLY tp.entrega_produccion
 
 
 --
--- Name: entrega_proveeduria entrega_proveeduria_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: entrega_proveeduria entrega_proveeduria_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_proveeduria
@@ -226,7 +270,7 @@ ALTER TABLE ONLY tp.entrega_proveeduria
 
 
 --
--- Name: estacion_primaria estacion_primaria_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: estacion_primaria estacion_primaria_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.estacion_primaria
@@ -234,7 +278,7 @@ ALTER TABLE ONLY tp.estacion_primaria
 
 
 --
--- Name: linea linea_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: linea linea_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.linea
@@ -242,7 +286,7 @@ ALTER TABLE ONLY tp.linea
 
 
 --
--- Name: productor productor_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: productor productor_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.productor
@@ -250,7 +294,7 @@ ALTER TABLE ONLY tp.productor
 
 
 --
--- Name: proveedor proveedor_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: proveedor proveedor_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.proveedor
@@ -258,7 +302,7 @@ ALTER TABLE ONLY tp.proveedor
 
 
 --
--- Name: provincia provincia_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: provincia provincia_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.provincia
@@ -266,7 +310,7 @@ ALTER TABLE ONLY tp.provincia
 
 
 --
--- Name: red_distribucion red_distribucion_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: red_distribucion red_distribucion_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.red_distribucion
@@ -274,7 +318,7 @@ ALTER TABLE ONLY tp.red_distribucion
 
 
 --
--- Name: subestacion subestacion_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: subestacion subestacion_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.subestacion
@@ -282,7 +326,7 @@ ALTER TABLE ONLY tp.subestacion
 
 
 --
--- Name: transportista transportista_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: transportista transportista_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.transportista
@@ -290,7 +334,7 @@ ALTER TABLE ONLY tp.transportista
 
 
 --
--- Name: zona zona_pkey; Type: CONSTRAINT; Schema: tp; 
+-- Name: zona zona_pkey; Type: CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.zona
@@ -298,7 +342,7 @@ ALTER TABLE ONLY tp.zona
 
 
 --
--- Name: entrega_produccion entrega_produccion_nombre_estacion_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: entrega_produccion entrega_produccion_nombre_estacion_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_produccion
@@ -306,7 +350,7 @@ ALTER TABLE ONLY tp.entrega_produccion
 
 
 --
--- Name: entrega_produccion entrega_produccion_nombre_productor_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: entrega_produccion entrega_produccion_nombre_productor_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_produccion
@@ -314,7 +358,7 @@ ALTER TABLE ONLY tp.entrega_produccion
 
 
 --
--- Name: entrega_proveeduria entrega_proveeduria_nombre_productor_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: entrega_proveeduria entrega_proveeduria_nombre_productor_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_proveeduria
@@ -322,7 +366,7 @@ ALTER TABLE ONLY tp.entrega_proveeduria
 
 
 --
--- Name: entrega_proveeduria entrega_proveeduria_nombre_proveedor_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: entrega_proveeduria entrega_proveeduria_nombre_proveedor_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.entrega_proveeduria
@@ -330,7 +374,7 @@ ALTER TABLE ONLY tp.entrega_proveeduria
 
 
 --
--- Name: linea linea_numero_red_distribucion_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: linea linea_numero_red_distribucion_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.linea
@@ -338,7 +382,7 @@ ALTER TABLE ONLY tp.linea
 
 
 --
--- Name: productor_hidroelectrico productor_hidroelectrico_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: productor_hidroelectrico productor_hidroelectrico_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.productor_hidroelectrico
@@ -346,7 +390,7 @@ ALTER TABLE ONLY tp.productor_hidroelectrico
 
 
 --
--- Name: productor_nuclear productor_nuclear_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: productor_nuclear productor_nuclear_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.productor_nuclear
@@ -354,7 +398,7 @@ ALTER TABLE ONLY tp.productor_nuclear
 
 
 --
--- Name: productor_solar productor_solar_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: productor_solar productor_solar_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.productor_solar
@@ -362,7 +406,7 @@ ALTER TABLE ONLY tp.productor_solar
 
 
 --
--- Name: productor_termico productor_termico_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: productor_termico productor_termico_nombre_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.productor_termico
@@ -370,7 +414,7 @@ ALTER TABLE ONLY tp.productor_termico
 
 
 --
--- Name: red_distribucion red_distribucion_nombre_estacion_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: red_distribucion red_distribucion_nombre_estacion_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.red_distribucion
@@ -378,7 +422,7 @@ ALTER TABLE ONLY tp.red_distribucion
 
 
 --
--- Name: red_pertenece_compania red_pertenece_compania_nombre_compania_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: red_pertenece_compania red_pertenece_compania_nombre_compania_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.red_pertenece_compania
@@ -386,7 +430,7 @@ ALTER TABLE ONLY tp.red_pertenece_compania
 
 
 --
--- Name: red_pertenece_compania red_pertenece_compania_numero_red_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: red_pertenece_compania red_pertenece_compania_numero_red_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.red_pertenece_compania
@@ -394,7 +438,7 @@ ALTER TABLE ONLY tp.red_pertenece_compania
 
 
 --
--- Name: subestacion subestacion_linea_id_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: subestacion subestacion_linea_id_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.subestacion
@@ -402,7 +446,7 @@ ALTER TABLE ONLY tp.subestacion
 
 
 --
--- Name: suministro_inter_red suministro_inter_red_suministrado_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: suministro_inter_red suministro_inter_red_suministrado_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.suministro_inter_red
@@ -410,7 +454,7 @@ ALTER TABLE ONLY tp.suministro_inter_red
 
 
 --
--- Name: suministro_inter_red suministro_inter_red_suministrador_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: suministro_inter_red suministro_inter_red_suministrador_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.suministro_inter_red
@@ -418,7 +462,7 @@ ALTER TABLE ONLY tp.suministro_inter_red
 
 
 --
--- Name: zona zona_id_subestacion_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: zona zona_id_subestacion_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.zona
@@ -426,7 +470,7 @@ ALTER TABLE ONLY tp.zona
 
 
 --
--- Name: zona zona_nombre_provincia_fkey; Type: FK CONSTRAINT; Schema: tp; 
+-- Name: zona zona_nombre_provincia_fkey; Type: FK CONSTRAINT; Schema: tp; Owner: tf39_dba
 --
 
 ALTER TABLE ONLY tp.zona

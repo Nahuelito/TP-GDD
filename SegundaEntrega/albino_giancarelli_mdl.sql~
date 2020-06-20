@@ -1,5 +1,5 @@
 --
--- Data for Name: compania_electrica; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: compania_electrica; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.compania_electrica VALUES ('EDESUR');
@@ -15,7 +15,7 @@ INSERT INTO tp.compania_electrica VALUES ('DPETDF');
 
 
 --
--- Data for Name: entrega_produccion; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: entrega_produccion; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.entrega_produccion VALUES ('Atucha', 'Arctic ground squirrel', '2020-02-20', 200);
@@ -55,7 +55,7 @@ INSERT INTO tp.entrega_produccion VALUES ('Ikata', 'Urial', '2020-04-23', 202);
 
 
 --
--- Data for Name: entrega_proveeduria; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: entrega_proveeduria; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.entrega_proveeduria VALUES ('Oi', 'Thinfruit Sedge', '2G61T5S30E9613008', 1, 20, '2020-01-01');
@@ -80,7 +80,7 @@ INSERT INTO tp.entrega_proveeduria VALUES ('Yacireta', 'Vadimir Putin', 'JN1CV6E
 
 
 --
--- Data for Name: estacion_primaria; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: estacion_primaria; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.estacion_primaria VALUES ('American black bear', 19);
@@ -103,7 +103,7 @@ INSERT INTO tp.estacion_primaria VALUES ('Brown and yellow marshbird', 13);
 
 
 --
--- Data for Name: linea; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: linea; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.linea VALUES (1, 1000, 1);
@@ -126,7 +126,7 @@ INSERT INTO tp.linea VALUES (17, 1700, 17);
 
 
 --
--- Data for Name: productor; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: productor; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.productor VALUES ('Yacireta', 3000, 3100, '1992-04-10');
@@ -146,14 +146,14 @@ INSERT INTO tp.productor VALUES ('Sendai', 846, 890, '1985-07-01');
 
 
 --
--- Data for Name: productor_hidroelectrico; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: productor_hidroelectrico; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.productor_hidroelectrico VALUES (200, 100, 15000, 'Doel');
 
 
 --
--- Data for Name: productor_nuclear; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: productor_nuclear; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.productor_nuclear VALUES (5000, 100000, 3, 'Yacireta');
@@ -163,14 +163,14 @@ INSERT INTO tp.productor_nuclear VALUES (500, 10000, 1, 'Oi');
 
 
 --
--- Data for Name: productor_solar; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: productor_solar; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.productor_solar VALUES (12, 500, 'Metsamor');
 
 
 --
--- Data for Name: productor_termico; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: productor_termico; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.productor_termico VALUES (45, 100, 100000, 'Atucha');
@@ -179,7 +179,7 @@ INSERT INTO tp.productor_termico VALUES (55, 120, 10299, 'Ikata');
 
 
 --
--- Data for Name: proveedor; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: proveedor; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.proveedor VALUES ('Thinfruit Sedge', 'Colombia');
@@ -195,7 +195,7 @@ INSERT INTO tp.proveedor VALUES ('Vadimir Putin', 'Russia');
 
 
 --
--- Data for Name: provincia; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: provincia; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.provincia VALUES ('Buenos Aires', 'BA');
@@ -224,7 +224,7 @@ INSERT INTO tp.provincia VALUES ('Tucuman', 'TU');
 
 
 --
--- Data for Name: red_distribucion; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: red_distribucion; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.red_distribucion VALUES (1, 'American black bear');
@@ -247,7 +247,7 @@ INSERT INTO tp.red_distribucion VALUES (17, 'Brown and yellow marshbird');
 
 
 --
--- Data for Name: red_pertenece_compania; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: red_pertenece_compania; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.red_pertenece_compania VALUES ('EDESUR', 1);
@@ -271,7 +271,7 @@ INSERT INTO tp.red_pertenece_compania VALUES ('EDELAR', 1);
 
 
 --
--- Data for Name: subestacion; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: subestacion; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.subestacion VALUES (1, 1);
@@ -311,7 +311,7 @@ INSERT INTO tp.subestacion VALUES (34, 17);
 
 
 --
--- Data for Name: suministro_inter_red; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: suministro_inter_red; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.suministro_inter_red VALUES (1, 2, 200, '2020-01-03');
@@ -322,7 +322,7 @@ INSERT INTO tp.suministro_inter_red VALUES (4, 10, 400, '2019-08-23');
 
 
 --
--- Data for Name: transportista; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: transportista; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.transportista VALUES ('Stiffleaf False Goldenaster', '5TDBKRFH8FS511823');
@@ -347,7 +347,7 @@ INSERT INTO tp.transportista VALUES ('Fedex', 'WAUNF78P57A218970');
 
 
 --
--- Data for Name: zona; Type: TABLE DATA; Schema: tp; 
+-- Data for Name: zona; Type: TABLE DATA; Schema: tp; Owner: tf39_dba
 --
 
 INSERT INTO tp.zona VALUES ('1', 211612, 18.75, 734, 4585, 'Buenos Aires', 1);
